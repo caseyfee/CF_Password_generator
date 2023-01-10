@@ -2,9 +2,7 @@
 
 ##Description
 
-This website was created to assist humans to create safe passwords. A password created in this tool will allow the individual to pick what criteria they want in their password. Some example password options/requirements are capitol letter(s), symbol(s), number(s), ect and it will follow the OWASP Foundation documentation. The tool was created using the following javascript 
-
-I also learned a lot including:
+This website was created to assist users in the creation of a safe password. This password generator will allow the individual to pick what criteria they want in their password including capitol letter(s), symbol(s), number(s), ect and it will follow the OWASP Foundation documentation. The tool was created using the following javascript topics:
 
 - @CASEY ADD AS YOU LEARN
 - and so much more!
