@@ -10,7 +10,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  
+ 
 }
 
 
@@ -20,9 +21,10 @@ function generatePassword() {
   
   for (var i=0; i<passwordLength.length; i++) {
     password +=characters.charAt(Math.floor(Math.random() * charactersLength));
-
+    // @casey ^learn what that means
   }
-// @casey ^learn what that means
+  return password;
+
 
 
 
