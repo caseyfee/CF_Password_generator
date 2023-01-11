@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -11,9 +14,22 @@ function writePassword() {
 }
 
 
+function generatePassword() {
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var passwordLength = passwordLength.length
+  
+  for (var i=0; i<passwordLength.length; i++) {
+    password +=characters.charAt(Math.floor(Math.random() * charactersLength));
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  }
+// @casey ^learn what that means
+
+
+
+
+}
+
+
 
 // Prompt for Password Requirements
 
