@@ -1,3 +1,19 @@
+var hasLowerCharacters = confirm('Click OK to confirm including lowercase characters in your password.');
+var hasUpperCharacters = confirm('Click OK to confirm including uppercase characters in your password.');
+var hasNumCharacters = confirm('Click OK to confirm including numberic and special characters in your password.');
+var passwordLength = 8;
+var upperCharactersOptions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var lowerCharacterOptions = [,'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var numbericOptions = ['0','1','2','3','4','5','6','7','8','9'];
+// var specialChar = [' ','!','"','#','$','%','&','\','*','+',',','-','.',':',';','<','=','>','@','[',']','^','_','~','`','{'}',']';
+var passwordLength = prompt('How long do you want your password? [Between 8 and 128 characters]');
+
+// Prompt for Password Requirements
+
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -10,76 +26,78 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  
- 
 }
 
 
 function generatePassword() {
-  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  
   var passwordLength = passwordLength.length
   
   for (var i=0; i<passwordLength.length; i++) {
-    password +=characters.charAt(Math.floor(Math.random() * charactersLength));
-    // @casey ^learn what that means
+    if (hasNumCharacters) //Add requirement that would push the password out of the loop if  passwordLength.length is met) {
+      password +=hasNumCharacters[Math.floor(Math.random() * passwordLength.length)];
+               
+      console.log("Okay good-Your password will use numberic and special characters");
+    } else {
+      console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+    }
+
+    if (hasLowerCharacters) {
+      password +=hasLowerCharacters[Math.floor(Math.random() * passwordLength.length)];
+      console.log("Okay good-Your password will use lowercase characters");
+      
+    } else {
+      console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+    }
+
+    if (hasUpperCharacters) {
+      password +=hasUpperCharacters[Math.floor(Math.random() * passwordLength.length)];
+      console.log("Okay good-Your password will use upper characters");
+    } else {
+      console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+    }
+  
+    if (passwordLength) {
+      console.log("Okay good-your password will be a decent length");
+    } else {
+      console.log(confirm("Just follow the directions."));
+    }
   }
   return password;
 
-
-
-
-
-}
-
-
-
-// Prompt for Password Requirements
-
-function myPromptsFunction() {
-  var hasLowerCharacters = confirm('Click OK to confirm including lowercase characters in your password.');
-  var hasUpperCharacters = confirm('Click OK to confirm including uppercase characters in your password.');
-  var hasNumCharacters = confirm('Click OK to confirm including numberic and special characters in your password.');
-  var passwordLength = prompt('How long do you want your password? [Between 8 and 128 characters]');
-  // If false was chosen for hasCharaters, passwordLength, or Validation, then present user with a message
-
-  if (passwordLength>=8 & passwordLength <=128 ) {
-    confirm('Your selections have been validated and your password will be generated shortly.');
-  } else {
-    console.log(confirm("Please enter a number between 8 and 128!"));
-  }
-
+  function myPromptsFunction() {
+ 
+    if (passwordLength>=8 & passwordLength <=128 ) {
+      confirm('Your selections have been validated and your password will be generated shortly.');
+    } else {
+      console.log(confirm("Please enter a number between 8 and 128!"));
+    }
+  
     if (hasLowerCharacters) {
-    console.log("Okay good-Your password will use lowercase characters");
-  } else {
-    console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+      console.log("Okay good-Your password will use lowercase characters");
+    } else {
+      console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+    }
+  
+    if (hasUpperCharacters) {
+      console.log("Okay good-Your password will use upper characters");
+    } else {
+      console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+    }
+  
+    if (hasNumCharacters) {
+      console.log("Okay good-Your password will use numberic and special characters");
+    } else {
+      console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
+    }
+  
+    
+  
   }
 
-  if (hasUpperCharacters) {
-    console.log("Okay good-Your password will use upper characters");
-  } else {
-    console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
-  }
-
-  if (hasNumCharacters) {
-    console.log("Okay good-Your password will use numberic and special characters");
-  } else {
-    console.log(confirm("Your password will be much less secure without a variety of characters! You may want to chose to start the generator over"));
-  }
-
-  if (passwordLength) {
-    console.log("Okay good-your password will be a decent length");
-  } else {
-    console.log(confirm("Your password will be much less secure if it less than 8 characters! You may chose to start the generator over"));
-  }
 
   
-}
-
-  // Password Generator
-    // if characters was confirmed (was true), include in password creation
-    // if password length was confirmed (true) include in password creation
-
-  
-
+writePassword();
+generatePassword();
 
 
