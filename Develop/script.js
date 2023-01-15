@@ -3,7 +3,7 @@ var upperCharacterOptions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', '
 var lowerCharacterOptions = [, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var numOptions = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var promptAnswers = [];
-var specialChar = [' ', '!', '"', '#', '$', '%', '&', '\'',];
+var specialChar = [' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',','-','.',':',';','<','=', '>','?','@','[',']','^','_','`','{','}','|','~','\\'];
 
 // '\','*','+',',','-','.',':',';','<','=','>','@','[',']','^','_','~','`','{'}'];
 
@@ -24,7 +24,7 @@ function writePassword() {
 
 function generatePassword() {
   password = "";
-  for (var = i; i<passwordLength; i++); {
+  for (var i = 0; i<passwordLength; i++); {
     var ranPassworkd = Math.floor(Math.random() * passwordLength);
     password = password + promptAnswers[randomIndex];
   }
