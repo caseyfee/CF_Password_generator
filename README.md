@@ -1,6 +1,6 @@
 # Password_generator
 
-##Description
+## Description
 
 This website was created to assist users in the creation of a safe password. This password generator will allow the individual to pick what criteria they want in their password including capitol letter(s), symbol(s), number(s), ect and it will follow the OWASP Foundation documentation. The tool was created using the following javascript topics:
 
