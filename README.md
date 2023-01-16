@@ -4,7 +4,13 @@
 
 This website was created to assist users in the creation of a safe password. This password generator will allow the individual to pick what criteria they want in their password including capitol letter(s), symbol(s), number(s), ect and it will follow the OWASP Foundation documentation. The tool was created using the following javascript topics:
 
-- @CASEY ADD AS YOU LEARN
+- The difference between alert(), confirm(), and prompt();
+- Creating arrays;
+- Concatenation of arrays and sentences;
+- The use of functions (and functions within other functions);
+- The importance of correctly plaing the ";";
+- The power of learning from Google;
+- Using the Console to check work as you create;
 - and so much more!
 
 

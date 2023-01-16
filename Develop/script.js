@@ -23,7 +23,7 @@ function writePassword() {
 function generatePassword() {
   password = "";
   for (var i = 0; i<passwordLength; i++); {
-    // var ranPassworkd = Math.floor(Math.random() * passwordLength);
+    // var randomPassword = Math.floor(Math.random() * passwordLength);
     // password = password + promptAnswers[randomIndex];
   }
   return password
@@ -37,16 +37,18 @@ function myPromptsFunction() {
   promptAnswers = [];
   // Length of Password
   passwordLength = parseInt(prompt('How long do you want your password? [Between 8 and 128 characters]'));
-  // for (var i = 0; i < passwordLength.length; i++) {}
-  if (passwordLength >= 8 & passwordLength <= 128 & true) //& (typeof(passwordLength)=Number)
+  for (var i = 0; i < passwordLength.length; i++) {
+  if (passwordLength >= 8 & passwordLength <= 128) //& (typeof(passwordLength)=Number)
   {
+    return true;
     confirm('Your selections have been validated and your password will be generated shortly.');
     console.log("Okay good-your password will be a decent length");
-  } else (isNaN(passwordLength) & passwordLength<8 & passwordLength >128); {
-    // console.log(alert("Please enter a number between 8 and 128!"));
-    // console.log(confirm("Just follow the directions."));
+  } else (isNaN(passwordLength) || passwordLength<8 || passwordLength >128); {
+    return false;
+    console.log(alert("Please enter a number between 8 and 128!"));
+    console.log(confirm("Just follow the directions."));
   }
-
+}
   // Lowercase
   var lowerCase = confirm('Click OK to confirm including lowercase characters in your password.')
   if (lowerCase) {
@@ -64,9 +66,7 @@ function myPromptsFunction() {
     promptAnswers = promptAnswers.concat(upperCharacterOptions);
     password += upperCase[Math.floor(Math.random() * passwordLength.length)];
     console.log("Okay good-Your password will use uppercase characters");
-
   }
-
   else {
     console.log("weak password");
   }
@@ -77,7 +77,6 @@ function myPromptsFunction() {
     promptAnswers = promptAnswers.concat(specialChar);
     password += specialChar[Math.floor(Math.random() * passwordLength.length)];
     console.log("Okay good-Your password will use special characters");
-
   }
   else {
     console.log("weak password");
@@ -94,7 +93,7 @@ function myPromptsFunction() {
     else {
       console.log("weak password");
     }
-  
+  return true;
 }
   // return password;
 
