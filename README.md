@@ -22,7 +22,7 @@ No installation is required.
 
 A screenshot is included below of the site. The site images are saved here: 
 
-/Users/caseyfee/Documents/Working Files/FilesBCSDownload/Week_3/CF_Password_generator/assets/css/images
+/Users/caseyfee/Documents/Working Files/FilesBCSDownload/Week_3/02-Challenge/CF_Password_generator/Develop/Images/generator-pic.png
 
 
 A GitHub link is here: https://github.com/caseyfee/CF_Password_generator.git
