@@ -30,7 +30,7 @@ A GitHub link is here: https://github.com/caseyfee/CF_Password_generator.git
 
 Live link: https://caseyfee.github.io/CF_Password_generator/
 
-![Webpage Screenshot](./assets/css/images/generator-pic.png)
+![Webpage Screenshot](./Develop/Images/generator-pic.png)
 
 
 ## Credits
