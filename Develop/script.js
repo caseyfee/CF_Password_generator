@@ -14,22 +14,22 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-    myPromptsFunction(); // If entered correctly, function will return true. If they mess up - false
-    var passwordText = document.querySelector("#password");
+  // var loopPassword = myPromptsFunction();
+  var passwordText = document.querySelector("#password");
+  
 
   if(myPromptsFunction) {
     var nextPassword = generatePassword();
-
     passwordText.value = nextPassword;
   } else {
-    alert ("Please follow Directions and Try Again. No Password for you");
+    alert ("Please follow directions and Try Again. No Password for you");
   }
 }
 
 function generatePassword() {
-  password = "";
-  for (var i = 0; i<passwordLength.length; i++); {
-    var firstCharacter = Math.floor(Math.random() * passwordLength.length);
+  var password = "";
+  for (var i = 0; i<=passwordLength; i++); {
+    var firstCharacter = Math.floor(Math.random() * promptAnswers.length);
     password = password + promptAnswers[firstCharacter];
   }
   return password
@@ -43,16 +43,16 @@ function myPromptsFunction() {
   // Length of Password
   passwordLength = parseInt(prompt('How long do you want your password? [Between 8 and 128 characters]'));
   for (var i = 0; i < passwordLength.length; i++) {
-  if (passwordLength >= 8 & passwordLength <= 128) //& (typeof(passwordLength)=Number)
-  {
-    confirm('Your selections have been validated and your password will be generated shortly.');
-    console.log("Okay good-your password will be a decent length");
-    // return true;
-  } else (isNaN(passwordLength) || passwordLength<8 || passwordLength >128); {
-    console.log(alert("Please enter a number between 8 and 128!"));
-    console.log(confirm("Just follow the directions."));
-    // return false;
-  }
+    if (passwordLength >= 8 & passwordLength.length <= 128) //& (typeof(passwordLength)=Number)
+    {
+      confirm('Your selections have been validated and your password will be generated shortly.');
+      console.log("Okay good-your password will be a decent length");
+      // return true;
+    } else (isNaN(passwordLength) || passwordLength<8 || passwordLength >128); {
+      console.log(alert("Please enter a number between 8 and 128!"));
+      console.log(confirm("Just follow the directions."));
+      // return false;
+    }
 }
   // Lowercase
   var lowerCase = confirm('Click OK to confirm including lowercase characters in your password.')
@@ -90,18 +90,15 @@ function myPromptsFunction() {
   // Numbers
   var num = confirm('Click OK to confirm including numberic characters in your password.')
   
-    if (num) {//Add requirement that would push the password out of the loop if  passwordLength.length is met) {
-      promptAnswers = promptAnswers.concat(numOptions);
-      password += numOptions[Math.floor(Math.random() * passwordLength.length)];
-      console.log("Okay good-Your password will use numberic characters");
-    }
-    else {
-      console.log("weak password");
-    }
-  return true;
+  if (num) {//Add requirement that would push the password out of the loop if  passwordLength.length is met) {
+    promptAnswers = promptAnswers.concat(numOptions);
+    password += numOptions[Math.floor(Math.random() * passwordLength.length)];
+    console.log("Okay good-Your password will use numberic characters");
+  }
+  else {
+    console.log("weak password");
+  }
+  // return true;
 }
   // return password;
 
-
-// writePassword();
-// generatePassword();
