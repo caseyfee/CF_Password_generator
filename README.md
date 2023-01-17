@@ -35,4 +35,4 @@ Live link: https://caseyfee.github.io/CF_Password_generator/
 
 ## Credits
 
-Shout out to my classmates who answered many a question throughout the process.
+Shout out to my classmates who answered many a question throughout the process and to my AMAZING tutor - Dominique Meeks Gombe!!
