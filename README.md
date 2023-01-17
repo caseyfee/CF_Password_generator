@@ -1,4 +1,4 @@
-# Password_generator
+# CF_Password_generator
 
 ## Description
 
