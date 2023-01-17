@@ -9,10 +9,6 @@ var specialChar = [' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-
 // Write password to the #password input
 function writePassword() {
   password = "";
@@ -92,7 +88,7 @@ function myPromptsFunction() {
   // Numbers
   var num = confirm('Click OK to confirm including numberic characters in your password.')
 
-  if (num) {//Add requirement that would push the password out of the loop if  passwordLength is met) {
+  if (num) {
     promptAnswers = promptAnswers.concat(numOptions);
     password += numOptions[Math.floor(Math.random() * numOptions.length)];
     console.log("Okay good-Your password will use numberic characters");
@@ -103,5 +99,4 @@ function myPromptsFunction() {
   
   return true;
 }
-  // return password;
 
